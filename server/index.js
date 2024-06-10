@@ -1,11 +1,12 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+import express from 'express';
+import 'dotenv/config';
+import balanceSheetRoutes from './routes/balanceSheet.js';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use('/api/v1/BalanceSheet', balanceSheetRoutes);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.info(`Example app listening on port ${port}`);
 });
