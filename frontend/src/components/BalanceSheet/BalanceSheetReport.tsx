@@ -51,7 +51,7 @@ export function BalanceSheetReport({ report }: Props) {
                   </td>
                 </tr>
               }
-              {section.Rows.map((subRow, index) => (
+              {section.Rows?.map((subRow, index) => (
                 <tr
                   key={index}
                   data-type={subRow.RowType}

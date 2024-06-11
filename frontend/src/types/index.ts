@@ -23,7 +23,7 @@ export interface SummaryRow {
 
 export interface SectionRow {
   RowType: 'Section';
-  Rows: (Row | SummaryRow)[];
+  Rows?: (Row | SummaryRow)[];
   Title: string;
 }
 export interface Report {
