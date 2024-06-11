@@ -1,7 +1,7 @@
 import { useBalanceSheet } from '@/hooks';
 import { BalanceSheetReport } from './BalanceSheetReport';
 
-export default function BalanceSheet() {
+export function BalanceSheet() {
   const { data: reports, error, isLoading } = useBalanceSheet();
   if (isLoading) return 'Loading...';
 

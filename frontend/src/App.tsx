@@ -1,5 +1,5 @@
 import { ErrorBoundary } from 'react-error-boundary';
-import BalanceSheet from '@/components/BalanceSheet';
+import { BalanceSheet } from '@/components';
 
 import { QueryClient, QueryClientProvider } from 'react-query';
 
