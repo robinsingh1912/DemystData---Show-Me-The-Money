@@ -1,11 +1,18 @@
 import BalanceSheet from '@/components/BalanceSheet';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <>
-      <h1 className='text-3xl font-bold underline text-center'>Hello world!</h1>
-      <BalanceSheet />
-    </>
+    <QueryClientProvider client={queryClient}>
+      <h1 className='text-3xl font-bold underline text-center'>
+        Balance Sheet Report
+      </h1>
+      <section className='p-8'>
+        <BalanceSheet />
+      </section>
+    </QueryClientProvider>
   );
 }
 
