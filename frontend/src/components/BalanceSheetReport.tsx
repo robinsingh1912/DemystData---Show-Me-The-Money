@@ -20,7 +20,6 @@ export function BalanceSheetReport({ report }: Props) {
     [report.Rows]
   );
 
-  console.log(sections);
   return (
     <div className='shadow-sm overflow-hidden my-8'>
       <div className='flex justify-between gap-4'>
