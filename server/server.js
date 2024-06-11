@@ -4,7 +4,7 @@ import cors from 'cors'; // Import the cors middleware
 
 import balanceSheetRoutes from './routes/balanceSheet.js';
 
-const app = express();
+export const app = express();
 const port = process.env.PORT || 5000;
 
 const origin = process.env.ORIGIN || 'http://localhost:3000';
