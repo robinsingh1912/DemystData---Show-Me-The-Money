@@ -1,3 +1,4 @@
+import { ErrorBoundary } from 'react-error-boundary';
 import BalanceSheet from '@/components/BalanceSheet';
 
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -11,7 +12,9 @@ function App() {
         Balance Sheet Report
       </h1>
       <section className='p-8'>
-        <BalanceSheet />
+        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+          <BalanceSheet />
+        </ErrorBoundary>
       </section>
     </QueryClientProvider>
   );
